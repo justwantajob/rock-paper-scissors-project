@@ -15,11 +15,21 @@ body {
   align-items: center;
   justify-content: center;
 
-  padding: 36px;
+  padding: 32px;
 }
 
-.game-title {
-  font-weight: 600;
+.score-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 176px;
+}
+
+.score-wins,
+.score-losses,
+.score-ties {
+  font-size: 100px;
+  font-weight: 500;
 }
 
 .game-container {
@@ -45,7 +55,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 36px;
+  gap: 32px;
 }
 
 .move-button {
@@ -67,6 +77,10 @@ body {
   filter: brightness(105%);
 }
 
+.move-button:active {
+  opacity: 0.6;
+}
+
 .rock-button {
   background-color: rgba(255, 166, 0, 0.1);
   border: 1px solid rgb(255, 191, 0);
@@ -86,4 +100,33 @@ body {
   border: 1px solid rgb(0, 157, 255);
   color: rgb(0, 157, 255);
   box-shadow: rgba(0, 157, 255, 0.16) 0px 2px 8px 0px;
+}
+
+.game-result-container {
+  font-size: 16px;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 176px;
+}
+
+.player-move-container,
+.computer-move-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+
+.move-title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.player-move,
+.computer-move {
+  font-weight: 200;
+  font-size: 24px;
 }

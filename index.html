@@ -23,9 +23,15 @@
   <!-- loading fonts -->
 </head>
 <body>
-  <!-- <header>
-    <h1 class="game-title">Rock Paper Scissors</h1>
-  </header> -->
+  <header>
+    <div class="score-table">
+      <div class="score-wins"></div>
+      <p>|</p>
+      <div class="score-ties"></div>
+      <p>|</p>
+      <div class="score-losses"></div>
+    </div>
+  </header>
 
   <main class="game-container">
 
@@ -35,12 +41,38 @@
     </div>
 
     <div class="game-input-container">
-      <button class="move-button rock-button">Rock</button>
-      <button class="move-button paper-button">Paper</button>
-      <button class="move-button scissors-button">Scissors</button>
+      <button
+        class="move-button rock-button"
+        onclick="playGame('rock');"
+        >Rock
+      </button>
+
+      <button
+        class="move-button paper-button"
+        onclick="playGame('paper');"
+        >Paper
+      </button>
+
+      <button
+        class="move-button scissors-button"
+        onclick="playGame('scissors');"
+        >Scissors
+      </button>
+
     </div>
 
-    <div class="game-result-container">Choose wisely.</div>
+    <div class="game-result-container js-game-container">
+      <div class="player-move-container">
+        <p class="move-title">YOU</p>
+        <p class="player-move js-player-move"></p>
+        <p></p>
+      </div>
+      
+      <div class="computer-move-container">
+        <p class="move-title">COMPUTER</p>
+        <p class="computer-move js-computer-move"></p>
+      </div>
+    </div>
 
   </main>
 
